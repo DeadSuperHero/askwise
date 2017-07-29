@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<div class="question_outer col-md-6">
+  <h2 class="heading"><%= @question.query %></h2>
+  <div class="question_inner">
+    <div class="user_info">
+      <%= image_tag avatar_for @user, class: "avatar" %>
+      <%= @question.user.email %>
+    </div>
+    <p><%= @question.body %></p>
+    <%= link_to 'Edit', edit_question_path(@question) %> |
+  </div>
+</div>

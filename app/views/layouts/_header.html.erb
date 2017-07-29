@@ -1,0 +1,37 @@
+<nav class="navbar navbar-toggleable-md fixed-top bg-faded">
+
+<div class="nav-container">
+  <a class="navbar-brand" href="/">AskWise</a>
+
+<div id="user_menu">
+  <div class="btn-group">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <% if user_signed_in? %>
+      <%= image_tag avatar_for @user, class: "avatar" %>
+      <%= current_user.email %>
+      <% else %>
+      <i class="fa fa-user-circle" aria-hidden="true"></i>
+      user
+      <% end %>
+    </button>
+    <div class="dropdown-menu dropdown-menu-right">
+
+
+      <% if user_signed_in? %>
+      <%= link_to "New Question", new_question_path,
+      class: "dropdown-item" %>
+      <div class="dropdown-divider"></div>
+        <%= link_to "Sign Out", destroy_user_session_path,
+        class: "dropdown-item", method: :delete %>
+
+        <% else %>
+        <%= link_to "Sign In", new_user_session_path,
+        class: "dropdown-item" %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+</div>
+
+</nav>
