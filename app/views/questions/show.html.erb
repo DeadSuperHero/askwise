@@ -15,6 +15,20 @@
   </div>
 
   <div class="answer_outer">
-    <p>Answers go here.</p>
+    <div class="answer_inner" id="answers_<%= @question.id%>">
+      <div class="well">
+
+                <% if @question.answers.present?%>
+                  <%= render @question.answers, question: @question %>
+
+                <% end %>
+                <%= form_for([@question, @question.answers.build], remote: true) do |f| %>
+                <%=f.text_area :body, placeholder: "Add your answer",
+                class:"answer_content", id: "answer_content_#{@question.id}"%>
+                <%= f.submit 'Answer', class: "btn btn-primary" %>
+                <% end %>
+            </div>
+    </div>
+
   </div>
 </div>
