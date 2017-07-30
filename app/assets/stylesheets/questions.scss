@@ -19,6 +19,10 @@
   padding: 10px;
 }
 
+.question_entry {
+  margin-top: 10px;
+}
+
 h2.heading {
   font-weight: 200;
   margin: 10px;
@@ -30,4 +34,20 @@ h2.heading {
 
 user_info img, user_avatar img {
   border-radius:30px;
+}
+
+
+/* Some styling for Answers */
+
+textarea.answer_content {
+  min-width: 585px;
+  max-width: 585px;
+}
+
+input.btn-answer {
+  vertical-align: top;
+}
+
+.answer_body {
+  padding: 10px;
 }

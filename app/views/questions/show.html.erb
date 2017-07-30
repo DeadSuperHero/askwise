@@ -1,13 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<div class="question_outer col-md-8">
-  <h2 class="heading"><%= @question.query %></h2>
-  <div class="question_inner">
-    <div class="user_info">
-      <%= image_tag avatar_for @user, class: "avatar" %>
-      <%= @question.user.email %>
+<div class="col-md-8">
+  <div class="question_outer">
+    <h2 class="heading"><%= @question.query %></h2>
+    <div class="question_inner">
+      <div class="user_info">
+        <%= image_tag avatar_for @user, class: "avatar" %>
+        <%= @question.user.email %>
+      </div>
+      <p><%= @question.body %></p>
+      <%= link_to 'Edit', edit_question_path(@question) %> |
     </div>
-    <p><%= @question.body %></p>
-    <%= link_to 'Edit', edit_question_path(@question) %> |
+
+  </div>
+
+  <div class="answer_outer">
+    <div class="answer_inner" id="answers_<%= @question.id%>">
+      <div class="well">
+
+                <% if @question.answers.present?%>
+                  <%= render @question.answers, question: @question %>
+
+                <% end %>
+                <%= form_for([@question, @question.answers.build], remote: true) do |f| %>
+                <%=f.text_area :body, placeholder: "Add your answer",
+                class:"answer_content", id: "answer_content_#{@question.id}"%>
+                <%= f.submit 'Answer', class: "btn btn-primary btn-answer" %>
+                <% end %>
+            </div>
+    </div>
+
   </div>
 </div>
