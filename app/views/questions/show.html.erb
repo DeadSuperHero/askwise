@@ -5,7 +5,7 @@
     <h2 class="heading"><%= @question.query %></h2>
     <div class="question_inner">
       <div class="user_info">
-        <%= image_tag avatar_for @user, class: "avatar" %>
+        <%= image_tag avatar_for @question.user, class: "avatar" %>
         <%= @question.user.email %>
       </div>
       <p><%= @question.body %></p>
