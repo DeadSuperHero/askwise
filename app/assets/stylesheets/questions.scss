@@ -35,3 +35,15 @@ h2.heading {
 user_info img, user_avatar img {
   border-radius:30px;
 }
+
+
+/* Some styling for Answers */
+
+textarea.answer_content {
+  min-width: 585px;
+  max-width: 585px;
+}
+
+input.btn-answer {
+  vertical-align: top;
+}
