@@ -22,11 +22,22 @@
                   <%= render @question.answers, question: @question %>
 
                 <% end %>
+
+<% unless user_signed_in? %>
+
+  <div class="answer_blocked">
+<%= link_to "Sign in to answer!", new_user_session_path %>
+  </div>
+
+<% else %>
+
                 <%= form_for([@question, @question.answers.build], remote: true) do |f| %>
                 <%=f.text_area :body, placeholder: "Add your answer",
                 class:"answer_content", id: "answer_content_#{@question.id}"%>
                 <%= f.submit 'Answer', class: "btn btn-primary btn-answer" %>
                 <% end %>
+
+<% end %>
             </div>
     </div>
 

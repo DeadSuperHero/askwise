@@ -7,7 +7,7 @@
   <div class="btn-group">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <% if user_signed_in? %>
-      <%= image_tag avatar_for @user, class: "avatar" %>
+      <%= image_tag avatar_for current_user, class: "avatar" %>
       <%= current_user.email %>
       <% else %>
       <i class="fa fa-user-circle" aria-hidden="true"></i>
