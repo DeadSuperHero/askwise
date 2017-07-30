@@ -1,5 +1,7 @@
 class AnswersController < ApplicationController
   before_action :set_answer, only: [:show, :edit, :update, :destroy]
+  before_action :find_answer
+  before_action :authenticate_user!
 
   # GET /answers
   # GET /answers.json

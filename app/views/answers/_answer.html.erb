@@ -1,0 +1,11 @@
+<ul>
+<li> <b> <%= image_tag avatar_for answer.user %> <%= answer.user.email%></b>
+<span> <%= answer.body %>
+
+<% if answer.user == current_user %>
+	 <%= link_to 'delete', question_answer_path(question, answer), method: :delete, data: {confirm: "Are you sure?"} %>
+
+<% end %>
+
+</span></li>
+</ul>
