@@ -15,6 +15,7 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "font-awesome";
 
 #user_menu {
   float: right;
@@ -24,4 +25,14 @@
 
 .navbar {
       border-bottom: 1px solid #bfbfbf;
+}
+
+.disclaimer {
+  font-size: 100px;
+  display: block;
+}
+
+.no_questions {
+  text-align: center;
+  color: #929292;
 }

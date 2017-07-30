@@ -24,6 +24,9 @@ gem 'coffee-rails', '~> 4.2'
 # Get that generic Bootstrap action
 gem 'bootstrap-sass'
 
+# And that FontAwesome action
+gem "font-awesome-rails"
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
