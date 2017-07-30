@@ -1,5 +1,5 @@
-<ul>
-<li> <b> <%= image_tag avatar_for answer.user %> <%= answer.user.email%></b>
+<div class="answer_body">
+<b> <%= image_tag avatar_for answer.user %> <%= answer.user.email%></b>
 <span> <%= answer.body %>
 
 <% if answer.user == current_user %>
@@ -7,5 +7,5 @@
 
 <% end %>
 
-</span></li>
-</ul>
+</span>
+</div>
