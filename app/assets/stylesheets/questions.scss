@@ -28,6 +28,26 @@ h2.heading {
   margin: 10px;
 }
 
+.question_query {
+  font-size: 30px;
+  font-weight: 200;
+}
+
+input#question_query {
+  width: 100%;
+  border: none;
+  padding-left: 10px;
+}
+
+textarea#question_body {
+  min-width: 98%;
+  min-height: 100px;
+}
+
+input:focus {
+    outline:none;
+}
+
 .user_info {
   margin-bottom: 10px;
 }

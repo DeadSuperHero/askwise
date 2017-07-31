@@ -1,4 +1,4 @@
-<%= form_for(question) do |f| %>
+<%= simple_form_for(question) do |f| %>
   <% if question.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
@@ -11,17 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :query %>
-    <%= f.text_field :query %>
-  </div>
+    <%= f.input :query, placeholder: 'Ask your question here!', label: false, class: "heading" %>
 
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-  </div>
+  <div class="question_inner">
+      <%= f.input :body, placeholder: 'Add details about your question! Try to be thorough.', label: false %>
 
-  <div class="actions">
-    <%= f.submit %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
   </div>
 <% end %>
