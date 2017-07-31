@@ -59,6 +59,12 @@ user_info img, user_avatar img {
 
 /* Some styling for Answers */
 
+.answer_well {
+  background-color: #f1f1f1;
+  border: 1px solid #c1c1c1;
+  border-top: none;
+}
+
 textarea.answer_content {
   min-width: 585px;
   max-width: 585px;
@@ -82,4 +88,5 @@ input.btn-answer {
 .new_answer {
   border-top: 1px solid #c3c3c3;
   padding-top: 10px;
+  padding-left: 10px;
 }

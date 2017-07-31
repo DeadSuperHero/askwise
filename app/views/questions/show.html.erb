@@ -16,7 +16,7 @@
 
   <div class="answer_outer">
     <div class="answer_inner" id="answers_<%= @question.id%>">
-      <div class="well">
+      <div class="answer_well">
 
                 <% if @question.answers.present?%>
                   <%= render @question.answers, question: @question %>
