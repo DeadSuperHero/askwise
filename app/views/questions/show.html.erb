@@ -12,9 +12,14 @@
       <div class="user_info">
         <%= image_tag avatar_for @question.user, class: "avatar" %>
         <%= @question.user.email %>
+
+        <div class="tags">
+          <i class="fa fa-tags" aria-hidden="true"></i>
+          <%= raw @question.tag_list.map { |t| link_to t, tag_path(t) }.join(' ') %>
+        </div>
+
       </div>
         <div class="question_body">
-            Tags: <%= raw @question.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
           <p><%= markdown(@question.body) %></p>
         </div>
     </div>

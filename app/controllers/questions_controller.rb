@@ -5,7 +5,7 @@ class QuestionsController < ApplicationController
   # GET /questions.json
   def index
       if params[:tag].present?
-        @questions = Question.tagged_with(params[:tag])
+        @questions = Question.tagged_with(params[:tag]).order("created_at DESC")
       else
       @questions = Question.all.order("created_at DESC")
     end
