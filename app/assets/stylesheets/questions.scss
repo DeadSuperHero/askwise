@@ -10,7 +10,7 @@
 
 .question_outer {
   border: 1px solid #a9a9a9;
-  border-radius: 3px;
+  border-radius: 3px 3px 0px 0px;
   padding: 0 !important;
 }
 
@@ -37,6 +37,8 @@ input#question_query {
   width: 100%;
   border: none;
   padding-left: 10px;
+  font-size: 30px;
+  outline: none;
 }
 
 textarea#question_body {
@@ -45,7 +47,7 @@ textarea#question_body {
 }
 
 input:focus {
-    outline:none;
+    outline: none;
 }
 
 .user_info {
