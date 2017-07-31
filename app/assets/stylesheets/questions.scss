@@ -47,12 +47,19 @@
 .question_body {
   padding: 10px;
   padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px !important;
 }
 
 h2.heading {
   font-weight: 200;
   margin: 10px;
   display: inline-block;
+}
+
+small.instruct {
+  text-align: center;
+  display: block;
 }
 
 .question_query {
