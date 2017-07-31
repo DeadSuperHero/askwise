@@ -30,6 +30,9 @@ gem "font-awesome-rails"
 # Simple Form
 gem "simple_form"
 
+# Add support for Markdown
+gem "redcarpet"
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

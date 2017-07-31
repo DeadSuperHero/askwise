@@ -8,7 +8,7 @@
         <%= image_tag avatar_for @question.user, class: "avatar" %>
         <%= @question.user.email %>
       </div>
-      <p><%= @question.body %></p>
+      <p><%= markdown(@question.body) %></p>
       <%= link_to 'Edit', edit_question_path(@question) %> |
     </div>
 
