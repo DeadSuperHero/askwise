@@ -16,7 +16,7 @@
   <div class="question_inner">
       <small><i>Custom formatting is supported with markdown.</i></small>
       <%= f.input :body, placeholder: 'Add details about your question! Try to be thorough.', label: false %>
-      <%= f.text_field :tag_list, value: f.object.tag_list.to_s %>
+      <%= f.text_field :tag_list %>
 
     <div class="actions">
       <%= f.submit :class => 'btn btn-success' %>

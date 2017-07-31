@@ -5,7 +5,7 @@
     <h2 class="heading"><%= @question.query %></h2>
     <div class="question_actions">
       <%= link_to edit_question_path(@question) do %>
-        <i class="fa fa-pencil" aria-hidden="true"></i>
+        <i class="fa fa-wrench" aria-hidden="true"></i>
       <% end %>
     </div>
     <div class="question_inner">
@@ -14,7 +14,7 @@
         <%= @question.user.email %>
       </div>
         <div class="question_body">
-            <%= @question.tag_list %>
+            Tags: <%= raw @question.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
           <p><%= markdown(@question.body) %></p>
         </div>
     </div>
