@@ -8,9 +8,11 @@
         <%= image_tag avatar_for @question.user, class: "avatar" %>
         <%= @question.user.email %>
       </div>
-      <%= @question.tag_list %>
-      <p><%= markdown(@question.body) %></p>
-      <%= link_to 'Edit', edit_question_path(@question) %> |
+        <div class="question_body">
+            <%= @question.tag_list %>
+          <p><%= markdown(@question.body) %></p>
+          <%= link_to 'Edit', edit_question_path(@question) %> |
+        </div>
     </div>
 
   </div>
@@ -33,6 +35,7 @@
 <% else %>
 
                 <%= form_for([@question, @question.answers.build], remote: true) do |f| %>
+                <%= image_tag response_avatar_for current_user %>
                 <%=f.text_area :body, placeholder: "Add your answer",
                 class:"answer_content", id: "answer_content_#{@question.id}"%>
                 <%= f.submit 'Answer', class: "btn btn-primary btn-answer" %>

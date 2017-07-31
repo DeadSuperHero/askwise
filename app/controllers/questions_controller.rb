@@ -4,7 +4,11 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.json
   def index
-    @questions = Question.all
+      if params[:tag].present?
+        @questions = Question.tagged_with(params[:tag])
+      else
+      @questions = Question.all.order("created_at DESC")
+    end
   end
 
   # GET /questions/1
