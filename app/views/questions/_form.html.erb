@@ -1,4 +1,4 @@
-<%= simple_form_for(question) do |f| %>
+<%= simple_form_for(question, html: { class: 'form-horizontal' }) do |f| %>
   <% if question.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
@@ -17,7 +17,7 @@
       <%= f.input :body, placeholder: 'Add details about your question! Try to be thorough.', label: false %>
 
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit :class => 'btn btn-success' %>
     </div>
   </div>
 <% end %>
