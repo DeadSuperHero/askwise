@@ -91,6 +91,15 @@ input.btn-answer {
   vertical-align: top;
 }
 
+.answer_actions {
+  display: inline-block;
+  float: right;
+}
+
+.answer_actions a, .question_actions a {
+  color: #6b6b6b;
+}
+
 .answer_body {
   padding: 10px;
   border-bottom: 1px solid #b1b1b1;
