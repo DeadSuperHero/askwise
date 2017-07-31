@@ -36,3 +36,8 @@
   text-align: center;
   color: #929292;
 }
+
+.open > .dropdown-menu {
+    display: block;
+    padding: 10px;
+}

@@ -1,0 +1,41 @@
+
+<div class="jumbotron">
+  <h1>Welcome!</h1>
+  <p>Welcome to AskWise, a question and answer system for Teams!</p>
+
+  <div class="btn-group" role="group" aria-label="...">
+    <%= link_to "Sign In", new_user_session_path, class: :"btn btn-lg btn-success" %>
+    <%= link_to "Sign Up", new_user_registration_path, class: :"btn btn-lg btn-success" %>
+  </div>
+
+</div>
+
+<div class="row" id="features">
+  <div class="col-md-3">
+    <i class="fa fa-question-circle" aria-hidden="true"></i>
+    <b>Ask Questions</b>
+    <p>AskWise allows teams to build a knowledge-base, using the internal questions
+      they ask one another every day!</p>
+  </div>
+
+  <div class="col-md-3">
+    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+    <b>Get Answers</b>
+    <p>Use our system to collect answers from team members, and vote on which
+      response makes the most sense!</p>
+  </div>
+
+  <div class="col-md-3">
+    <i class="fa fa-line-chart" aria-hidden="true"></i>
+    <b>Analyze Trends</b>
+    <p>Easily determine what kinds of questions are being asked by a given
+      department, and how frequently people are asking questions!</p>
+  </div>
+
+  <div class="col-md-3">
+    <i class="fa fa-slack" aria-hidden="true"></i>
+  <b>Integrate with Slack</b>
+  <p>Effortlessly connect to a dedicated Slack channel to easily
+    fetch answers to existing questions, or create ask new ones on the fly!</p>
+  </div>
+</div>
