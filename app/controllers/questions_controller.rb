@@ -4,12 +4,17 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.json
   def index
-    @questions = Question.all
+      if params[:tag].present?
+        @questions = Question.tagged_with(params[:tag]).order("created_at DESC")
+      else
+      @questions = Question.all.order("created_at DESC")
+    end
   end
 
   # GET /questions/1
   # GET /questions/1.json
   def show
+    @question = Question.find(params[:id])
   end
 
   # GET /questions/new
@@ -74,6 +79,6 @@ class QuestionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def question_params
-      params.require(:question).permit(:query, :body)
+      params.require(:question).permit(:query, :body, :tag_list)
     end
 end

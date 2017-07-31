@@ -33,6 +33,9 @@ gem "simple_form"
 # Add support for Markdown
 gem "redcarpet"
 
+# Add tagging library
+gem 'acts-as-taggable-on', '~> 4.0'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
