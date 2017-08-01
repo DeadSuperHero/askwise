@@ -111,8 +111,8 @@ user_info img, user_avatar img {
 }
 
 textarea.answer_content {
-  min-width: 80%;
-  max-width: 80%;
+  min-width: 100%;
+  min-width: 100%;
 }
 
 input.btn-answer {
@@ -176,6 +176,6 @@ input#question_tag_list {
 
 .response_avatar {
   display: inline-block;
-  vertical-align: top;
-  margin-bottom: 10px;
+  vertical-align: bottom;
+  margin-bottom: 20px;
 }
