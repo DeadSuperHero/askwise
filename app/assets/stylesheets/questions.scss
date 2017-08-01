@@ -55,6 +55,8 @@ h2.heading {
   font-weight: 200;
   margin: 10px;
   display: inline-block;
+  max-width: 85%;
+  font-size: 20px;
 }
 
 small.instruct {
@@ -67,12 +69,17 @@ small.instruct {
   font-weight: 200;
 }
 
+.question_body img {
+  width: 100%;
+}
+
 input#question_query {
   width: 100%;
   border: none;
   padding-left: 10px;
   font-size: 30px;
-  outline: none;
+  box-shadow: none;
+  height: auto;
 }
 
 textarea#question_body {
@@ -104,12 +111,17 @@ user_info img, user_avatar img {
 }
 
 textarea.answer_content {
-  min-width: 585px;
-  max-width: 585px;
+  min-width: 80%;
+  max-width: 80%;
 }
 
 input.btn-answer {
   vertical-align: top;
+}
+
+input#question_tag_list {
+  margin: 10px;
+  float: right;
 }
 
 .answer_actions {
@@ -136,4 +148,10 @@ input.btn-answer {
 .new_answer {
   padding-top: 10px;
   padding-left: 10px;
+}
+
+.response_avatar {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 10px;
 }
