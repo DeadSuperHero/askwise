@@ -9,6 +9,9 @@ class QuestionsController < ApplicationController
       else
       @questions = Question.all.order("created_at DESC")
     end
+
+    @active_questions = Question.limit(5).order("answers_count, created_at DESC")
+
   end
 
   # GET /questions/1

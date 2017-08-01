@@ -9,13 +9,21 @@
       <% @questions.each do |question| %>
       <div class="question_entry">
         <b><%= link_to question.query, question %></b>
+        <p><%= question.user.email %></p>
         <p><%= strip_tags(markdown(question.body)).truncate(300) %></p>
-        <%= link_to 'Edit', edit_question_path(question) %>
-        <%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
       <% end %>
       <% else %>
       <%= render "noquestions" %>
     <% end %>
   </div>
+</div>
+
+<div class="active_questions col-md-4">
+  <b>Active Discussions</b>
+  <% @active_questions.each do |question| %>
+  <div class="question_entry">
+    <b><%= link_to question.query, question %></b>
+  </div>
+  <% end %>
 </div>
