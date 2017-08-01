@@ -20,10 +20,10 @@
 </div>
 
 <div class="active_questions col-md-4">
-  <b>Active Discussions</b>
+  <h4>Active Discussions</h4>
   <% @active_questions.each do |question| %>
   <div class="question_entry">
-    <b><%= link_to question.query, question %></b>
+    <li><%= link_to question.query, question %></li>
   </div>
   <% end %>
 </div>
