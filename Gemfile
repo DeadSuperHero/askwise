@@ -32,6 +32,9 @@ gem "simple_form"
 
 gem 'counter_culture', '~> 1.0'
 
+# Search Gem
+gem 'pg_search'
+
 # Add support for Markdown, and an editor
 gem "redcarpet"
 gem "md_simple_editor"
