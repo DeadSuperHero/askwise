@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require md_simple_editor
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
@@ -21,6 +22,11 @@
   float: right;
   margin-top: 5px;
   margin-right: 5px;
+}
+
+.text_editor {
+  display: inline-block;
+  padding: 10px;
 }
 
 .navbar {

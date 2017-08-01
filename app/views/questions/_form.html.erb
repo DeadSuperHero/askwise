@@ -15,7 +15,11 @@
 
   <div class="question_inner">
       <%= f.text_field :tag_list, value: f.object.tag_list.to_s %>
-      <%= f.input :body, placeholder: 'Add details about your question! Try to be thorough.', label: false %>
+      <div class="text_editor"?
+      <%= md_simple_editor('btn-md')  do %>
+        <%= f.input :body, placeholder: 'Add details about your question! Try to be thorough.', label: false %>
+      <% end %>
+    </div>
       <small class="instruct"><i>Custom formatting is supported with
         <a href="https://daringfireball.net/projects/markdown/syntax"
         target="blank">Markdown.</a></i></small>

@@ -30,6 +30,8 @@ gem "font-awesome-rails"
 # Simple Form
 gem "simple_form"
 
+gem "md_simple_editor"
+
 # Add support for Markdown
 gem "redcarpet"
 

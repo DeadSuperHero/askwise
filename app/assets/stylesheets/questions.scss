@@ -124,6 +124,16 @@ input#question_tag_list {
   float: right;
 }
 
+.answer_editor {
+  display: inline-block;
+  width: 80%;
+  padding: 10px;
+}
+
+#md-editor img {
+      width: 100%;
+}
+
 .answer_actions {
   display: inline-block;
   float: right;

@@ -47,8 +47,12 @@
                 <div class="response_avatar">
                 <%= image_tag response_avatar_for current_user %>
                 </div>
-                <%=f.text_area :body, placeholder: "Add your answer",
-                class:"answer_content", id: "answer_content_#{@question.id}"%>
+                <div class="answer_editor">
+                <%= md_simple_editor('btn-xs') do %>
+                  <%=f.text_area :body, placeholder: "Add your answer",
+                  class:"answer_content", id: "answer_content_#{@question.id}"%>
+                <% end %>
+              </div>
                 <%= f.submit 'Answer', class: "btn btn-primary btn-answer" %>
                 <% end %>
 
