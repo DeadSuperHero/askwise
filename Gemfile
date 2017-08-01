@@ -9,7 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -31,6 +31,9 @@ gem "font-awesome-rails"
 gem "simple_form"
 
 gem 'counter_culture', '~> 1.0'
+
+# Search Gem
+gem 'pg_search'
 
 # Add support for Markdown, and an editor
 gem "redcarpet"
