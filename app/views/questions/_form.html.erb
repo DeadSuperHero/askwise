@@ -14,14 +14,17 @@
     <%= f.input :query, placeholder: 'Ask your question here!', label: false, class: "heading" %>
 
   <div class="question_inner">
-      <%= f.text_field :tag_list, value: f.object.tag_list.to_s %>
-      <%= f.input :body, placeholder: 'Add details about your question! Try to be thorough.', label: false %>
-      <small class="instruct"><i>Custom formatting is supported with
-        <a href="https://daringfireball.net/projects/markdown/syntax"
-        target="blank">Markdown.</a></i></small>
-
+      <div class="text_editor"?
+      <%= md_simple_editor('btn-md')  do %>
+        <%= f.input :body, placeholder: 'Add details about your question! Try to be thorough.', label: false %>
+      <% end %>
+    </div>
     <div class="actions">
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <%= f.input :tag_list, label: false, value: f.object.tag_list.to_s %>
+    <div class="accept">
       <%= f.submit :class => 'btn btn-success' %>
+    </div>
     </div>
   </div>
 <% end %>

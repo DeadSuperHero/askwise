@@ -84,7 +84,7 @@ input#question_query {
 
 textarea#question_body {
   min-width: 98%;
-  min-height: 100px;
+  min-height: 240px;
 }
 
 input:focus {
@@ -119,9 +119,29 @@ input.btn-answer {
   vertical-align: top;
 }
 
-input#question_tag_list {
-  margin: 10px;
+.question_tag_list {
+  width: 50%;
+  display: inline-block;
+}
+
+.accept {
+  display: inline-block;
   float: right;
+}
+
+input#question_tag_list {
+  width: 90%;
+  display: inline-block;
+}
+
+.answer_editor {
+  display: inline-block;
+  width: 80%;
+  padding: 10px;
+}
+
+#md-editor img {
+      width: 100%;
 }
 
 .answer_actions {
