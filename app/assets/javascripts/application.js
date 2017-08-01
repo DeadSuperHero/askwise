@@ -12,6 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.turbolinks
 //= require bootstrap
 //= require md_simple_editor
