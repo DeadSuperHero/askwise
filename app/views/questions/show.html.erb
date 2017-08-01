@@ -56,3 +56,15 @@
 
   </div>
 </div>
+
+
+  <div class="related_questions col-md-4">
+    <h4>Similar Questions</h4>
+    <% unless @related_questions.blank? %>
+      <% @related_questions.each do |related_question| %>
+      <li><%= link_to related_question.query, related_question %></li>
+      <% end %>
+    <% else %>
+    <p>No related questions!</p>
+  <% end %>
+  </div>

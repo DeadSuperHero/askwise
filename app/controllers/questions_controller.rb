@@ -15,6 +15,7 @@ class QuestionsController < ApplicationController
   # GET /questions/1.json
   def show
     @question = Question.find(params[:id])
+    @related_questions = Question.tagged_with(@question.tag_list, any: true)
   end
 
   # GET /questions/new
