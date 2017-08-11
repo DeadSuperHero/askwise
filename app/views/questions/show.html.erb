@@ -10,8 +10,10 @@
     </div>
     <div class="question_inner">
       <div class="user_info">
+        <%= link_to @question.user do %>
         <%= image_tag avatar_for @question.user, class: "avatar" %>
         <%= @question.user.email %>
+        <% end %>
 
         <div class="tags">
           <i class="fa fa-tags" aria-hidden="true"></i>

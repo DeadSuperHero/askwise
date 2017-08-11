@@ -1,5 +1,7 @@
 <div class="answer_body">
+	<%= link_to @question.user do %>
 <b> <%= image_tag avatar_for answer.user %> <%= answer.user.email%></b>
+<% end %>
 
 <div class="answer_actions">
 <% if answer.user == current_user %>

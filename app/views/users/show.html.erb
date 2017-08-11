@@ -38,12 +38,9 @@
 
       <div role="tabpanel" class="tab-pane" id="answers">
         <ul class="user_answer_list">
-<% @user.questions_with_answers.each do |question| %>
+<% @user.answers.each do |answer| %>
 <div class="answer_listing">
-<%= link_to question, class: :"h4" do %>
- <%= question.query %>
- <% end %>
-  <quote><%= strip_tags(markdown(question.body)).truncate(300) %></quote>
+  <quote><%= strip_tags(markdown(answer.body)).truncate(300) %></quote>
 </div>
 <% end %>
       </ul>
