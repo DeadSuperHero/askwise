@@ -1,6 +1,40 @@
-<div class="user_profile col-md-8">
+<div class="user_profile col-md-10">
+
   <div class="details">
     <%= image_tag headshot_for @user %>
-    <p><%= @user.email %></p>
+    <p><b><%= @user.email %></b></p>
+  </div>
+
+  <div class="contributions">
+
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#questions" aria-controls="questions" role="tab" data-toggle="tab">Questions</a></li>
+      <li role="presentation"><a href="#answers" aria-controls="answers" role="tab" data-toggle="tab">Answers</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="questions">
+        <ul class="question_list">
+            <% unless @user.questions.blank? %>
+          <% @user.questions.each do |question| %>
+          <% if question.user.present? %>
+            <%= link_to question, class: :"h2" do %>
+              <li class="title">
+                <%= question.query %>
+              </li>
+                <% end %>
+            <% end %>
+          <% end %>
+          <% else %>
+          <p>This user has not asked any questions yet!</p>
+          <% end %>
+        </ul>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="answers">
+        <p>Answers go here.</p>
+      </div>
+    </div>
+
   </div>
 </div>
