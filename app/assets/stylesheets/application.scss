@@ -83,11 +83,15 @@
 }
 
 .contributions {
-  background: #ddd;
-  text-align: center;
+  border: 1px solid #b7b6b6;
+  border-radius: 3px;
 }
 
-ul.user_question_list {
+.contributions .nav-tabs {
+  background: #f3f3f3;
+}
+
+ul.user_question_list, ul.user_answer_list {
   padding: 10px;
   text-align: left;
 }
@@ -96,7 +100,22 @@ li.title {
   list-style: none;
 }
 
-.question_listing {
+.question_listing, .answer_listing {
   border-bottom: 1px dotted #c2c2c2;
       margin: 10px;
+}
+
+.contributions .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+
+quote {
+  margin-left: 10px;
+  padding-left: 4px;
+  border-left: 4px solid #969696;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 5px;
 }

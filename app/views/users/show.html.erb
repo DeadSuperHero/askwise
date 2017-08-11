@@ -8,8 +8,10 @@
   <div class="contributions">
 
     <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#questions" aria-controls="questions" role="tab" data-toggle="tab">Questions</a></li>
-      <li role="presentation"><a href="#answers" aria-controls="answers" role="tab" data-toggle="tab">Answers</a></li>
+      <li role="presentation" class="active"><a href="#questions" aria-controls="questions" role="tab" data-toggle="tab">
+        <i class="fa fa-question-circle" aria-hidden="true"></i> Questions</a></li>
+      <li role="presentation"><a href="#answers" aria-controls="answers" role="tab" data-toggle="tab">
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Answers</a></li>
     </ul>
 
     <div class="tab-content">
@@ -19,7 +21,7 @@
           <% @user.questions.each do |question| %>
           <% if question.user.present? %>
           <div class="question_listing">
-            <%= link_to question, class: :"h2" do %>
+            <%= link_to question, class: :"h4" do %>
               <li class="title">
                 <%= question.query %>
               </li>
@@ -35,8 +37,16 @@
       </div>
 
       <div role="tabpanel" class="tab-pane" id="answers">
-        <p>Answers go here.</p>
-      </div>
+        <ul class="user_answer_list">
+<% @user.questions_with_answers.each do |question| %>
+<div class="answer_listing">
+<%= link_to question, class: :"h4" do %>
+ <%= question.query %>
+ <% end %>
+  <quote><%= strip_tags(markdown(question.body)).truncate(300) %></quote>
+</div>
+<% end %>
+      </ul>
     </div>
 
   </div>
