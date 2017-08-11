@@ -20,6 +20,8 @@
       <% if user_signed_in? %>
       <%= link_to "New Question", new_question_path,
       class: "dropdown-item" %>
+      <%= link_to "My Profile", user_path(current_user),
+      class: "dropdown-item" %>
       <div class="dropdown-divider"></div>
         <%= link_to "Sign Out", destroy_user_session_path,
         class: "dropdown-item", method: :delete %>

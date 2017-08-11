@@ -1,5 +1,6 @@
 <div class="user_profile col-md-8">
-  <p>User page!</p>
-  <%= image_tag avatar_for @user, class: "avatar" %>
-  <%= @user.email %>
+  <div class="details">
+    <%= image_tag headshot_for @user %>
+    <p><%= @user.email %></p>
+  </div>
 </div>
