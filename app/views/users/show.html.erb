@@ -18,9 +18,9 @@
       <div role="tabpanel" class="tab-pane active" id="questions">
         <ul class="user_question_list">
             <% unless @user.questions.blank? %>
-          <% @user.questions.each do |question| %>
+          <% @user.questions.order("created_at DESC").each do |question| %>
           <% if question.user.present? %>
-          <div class="question_listing">
+          <div class="listing">
             <%= link_to question, class: :"h4" do %>
               <li class="title">
                 <%= question.query %>
@@ -38,8 +38,11 @@
 
       <div role="tabpanel" class="tab-pane" id="answers">
         <ul class="user_answer_list">
-<% @user.answers.each do |answer| %>
-<div class="answer_listing">
+<% @user.answers.order("created_at DESC").each do |answer| %>
+<div class="listing">
+ <%= link_to answer.question, class: :"h4" do %>
+ <%= answer.question.query %>
+ <% end %>
   <quote><%= strip_tags(markdown(answer.body)).truncate(300) %></quote>
 </div>
 <% end %>
