@@ -5,5 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :questions
-  has_many :answers       
+  has_many :answers
+  belongs_to :department   
 end
