@@ -56,15 +56,15 @@
 
 /* Love for the sign-in form */
 #session_form {
-width: 60%;
-position: relative;
-display: block;
-border: 1px solid #afafaf;
-padding: 10px;
-border-radius: 3px;
-margin-left: auto;
-margin-right: auto;
-float: none;
+  width: 60%;
+  position: relative;
+  display: block;
+  border: 1px solid #afafaf;
+  padding: 10px;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
 }
 
 
@@ -85,4 +85,18 @@ float: none;
 .contributions {
   background: #ddd;
   text-align: center;
+}
+
+ul.user_question_list {
+  padding: 10px;
+  text-align: left;
+}
+
+li.title {
+  list-style: none;
+}
+
+.question_listing {
+  border-bottom: 1px dotted #c2c2c2;
+      margin: 10px;
 }

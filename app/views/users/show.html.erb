@@ -14,16 +14,19 @@
 
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane active" id="questions">
-        <ul class="question_list">
+        <ul class="user_question_list">
             <% unless @user.questions.blank? %>
           <% @user.questions.each do |question| %>
           <% if question.user.present? %>
+          <div class="question_listing">
             <%= link_to question, class: :"h2" do %>
               <li class="title">
                 <%= question.query %>
               </li>
                 <% end %>
+                <p><%= strip_tags(markdown(question.body)).truncate(300) %></p>
             <% end %>
+          </div>
           <% end %>
           <% else %>
           <p>This user has not asked any questions yet!</p>
