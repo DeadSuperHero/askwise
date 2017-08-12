@@ -33,4 +33,10 @@ module ApplicationHelper
      avatar_id = Digest::MD5::hexdigest(user.email).downcase
     	"https://seccdn.libravatar.org/avatar/#{avatar_id}.png?s=50"
     end
+
+
+    def headshot_for(user, options = {size:150})
+      avatar_id = Digest::MD5::hexdigest(user.email).downcase
+       "https://seccdn.libravatar.org/avatar/#{avatar_id}.png?s=150"
+     end
 end

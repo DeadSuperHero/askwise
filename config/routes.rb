@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
     root :to=> 'page#home'
 
+     resources :users, only:[:show] do
+     end
+
   resources :questions do
     resources :answers
   end

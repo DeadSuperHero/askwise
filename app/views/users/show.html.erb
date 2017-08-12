@@ -1,0 +1,53 @@
+<div class="user_profile col-md-10">
+
+  <div class="details">
+    <%= image_tag headshot_for @user %>
+    <p><b><%= @user.email %></b></p>
+  </div>
+
+  <div class="contributions">
+
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#questions" aria-controls="questions" role="tab" data-toggle="tab">
+        <i class="fa fa-question-circle" aria-hidden="true"></i> Questions</a></li>
+      <li role="presentation"><a href="#answers" aria-controls="answers" role="tab" data-toggle="tab">
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Answers</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="questions">
+        <ul class="user_question_list">
+            <% unless @user.questions.blank? %>
+          <% @user.questions.order("created_at DESC").each do |question| %>
+          <% if question.user.present? %>
+          <div class="listing">
+            <%= link_to question, class: :"h4" do %>
+              <li class="title">
+                <%= question.query %>
+              </li>
+                <% end %>
+                <p><%= strip_tags(markdown(question.body)).truncate(300) %></p>
+            <% end %>
+          </div>
+          <% end %>
+          <% else %>
+          <p>This user has not asked any questions yet!</p>
+          <% end %>
+        </ul>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="answers">
+        <ul class="user_answer_list">
+<% @user.answers.order("created_at DESC").each do |answer| %>
+<div class="listing">
+ <%= link_to answer.question, class: :"h4" do %>
+ <%= answer.question.query %>
+ <% end %>
+  <quote><%= strip_tags(markdown(answer.body)).truncate(300) %></quote>
+</div>
+<% end %>
+      </ul>
+    </div>
+
+  </div>
+</div>
