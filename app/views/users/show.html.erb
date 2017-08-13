@@ -8,10 +8,17 @@
   <div class="contributions">
 
     <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#questions" aria-controls="questions" role="tab" data-toggle="tab">
-        <i class="fa fa-question-circle" aria-hidden="true"></i> Questions</a></li>
-      <li role="presentation"><a href="#answers" aria-controls="answers" role="tab" data-toggle="tab">
-        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Answers</a></li>
+
+      <li role="presentation" class="active">
+        <a href="#questions" aria-controls="questions" role="tab" data-toggle="tab">
+        <i class="fa fa-question-circle" aria-hidden="true">
+        </i> Questions <div class="badge">
+        <%= @user.questions.count %></div></a></li>
+
+      <li role="presentation">
+        <a href="#answers" aria-controls="answers" role="tab" data-toggle="tab">
+        <i class="fa fa-exclamation-triangle" aria-hidden="true">
+        </i> Answers <div class="badge"><%= @user.answers.count %></div></a></li>
     </ul>
 
     <div class="tab-content">
