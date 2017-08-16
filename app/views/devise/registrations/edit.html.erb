@@ -1,49 +1,36 @@
 <div class="user_form col-md-10">
-  <h2 class="heading">Edit <%= resource_name.to_s.humanize %></h2>
+  <h2 class="heading">User Account</h2>
 
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <%= devise_error_messages! %>
+<!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
 
-<div id="user_properties" class="col-md-8">
-    <div class="field">
-      <%= f.input :email, autofocus: true %>
+    <li role="presentation" class="active">
+      <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+      <i class="fa fa-id-card" aria-hidden="true">
+      </i> Profile </a></li>
+
+    <li role="presentation">
+      <a href="#account" aria-controls="account" role="tab" data-toggle="tab">
+      <i class="fa fa-user-circle" aria-hidden="true">
+      </i> Account </a></li>
+
+  </ul>
+
+
+<!--Tab Panes -->
+    <div class="tab-content">
+
+      <div role="tabpanel" class="tab-pane active" id="profile">
+        <ul class="profile">
+          <p>Profile fields go here.</p>
+        </ul>
+      </div>
+
+      <div role="tabpanel" class="tab-pane" id="account">
+        <ul class="edit_account">
+            <%= render 'edit-account' %>
+        </ul>
+      </div>
+
     </div>
-
-
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-    <% end %>
-
-    <div class="field">
-      <%= f.input :password, autocomplete: "off" %>
-      <% if @minimum_password_length %>
-        <em><%= @minimum_password_length %> characters minimum</em>
-      <% end %>
-    </div>
-<br>
-    <div class="field">
-      <%= f.input :password_confirmation, autocomplete: "off" %>
-    </div>
-
-    <div class="field">
-      <%= f.input :current_password, autocomplete: "off" %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit "Update" %>
-    </div>
-  <% end %>
-</div>
-
-<div id="cancel_account" class="col-md-4">
-    <h3>Cancel my account</h3>
-
-    <p>You can close your AskWise account at any time!<br>
-      <br>Keep in mind
-      that all of your questions and answers will disappear after your account
-      is closed!</p>
-    <%= button_to "Cancel my account", registration_path(resource_name),
-    data: { confirm: "Are you sure?" },
-    method: :delete, class: "cancel_account btn btn-lg btn-danger" %>
-  </div>
 </div>
