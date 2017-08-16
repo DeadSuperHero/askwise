@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :questions
   has_many :answers
   has_many :questions_with_answers, :through => :answers, :source => :question
-  belongs_to :department
+  has_one :department
 end
