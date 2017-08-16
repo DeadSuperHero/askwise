@@ -17,7 +17,7 @@
 
               <%= form_for([@question, @question.answers.build], remote: true) do |f| %>
               <div class="answer_editor">
-              <%= md_simple_editor('btn-xs') do %>
+              <%= md_simple_editor('btn-sm') do %>
                 <%=f.text_area :body, placeholder: "Add your answer",
                 class:"answer_content", id: "answer_content_#{@question.id}"%>
               <% end %>
