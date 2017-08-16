@@ -1,0 +1,8 @@
+<% @user.answers.order("created_at DESC").each do |answer| %>
+  <div class="listing">
+   <%= link_to answer.question, class: :"h4" do %>
+   <%= answer.question.query %>
+   <% end %>
+    <quote><%= strip_tags(markdown(answer.body)).truncate(300) %></quote>
+  </div>
+<% end %>

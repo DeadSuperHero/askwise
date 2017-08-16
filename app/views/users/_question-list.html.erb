@@ -1,0 +1,16 @@
+<% unless @user.questions.blank? %>
+  <% @user.questions.order("created_at DESC").each do |question| %>
+  <% if question.user.present? %>
+  <div class="listing">
+  <%= link_to question, class: :"h4" do %>
+    <li class="title">
+      <%= question.query %>
+    </li>
+      <% end %>
+      <p><%= strip_tags(markdown(question.body)).truncate(300) %></p>
+  <% end %>
+  </div>
+  <% end %>
+  <% else %>
+  <p>This user has not asked any questions yet!</p>
+<% end %>

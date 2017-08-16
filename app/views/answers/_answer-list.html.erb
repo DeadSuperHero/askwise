@@ -1,0 +1,30 @@
+
+  <div class="answer_inner" id="answers_<%= @question.id%>">
+    <div class="answer_well">
+
+              <% if @question.answers.present?%>
+                <%= render @question.answers, question: @question, remote: true %>
+
+              <% end %>
+
+<% unless user_signed_in? %>
+
+<div class="answer_blocked">
+<%= link_to "Sign in to answer!", new_user_session_path %>
+</div>
+
+<% else %>
+
+              <%= form_for([@question, @question.answers.build], remote: true) do |f| %>
+              <div class="answer_editor">
+              <%= md_simple_editor('btn-sm') do %>
+                <%=f.text_area :body, placeholder: "Add your answer",
+                class:"answer_content", id: "answer_content_#{@question.id}"%>
+              <% end %>
+            </div>
+              <%= f.submit 'Answer', class: "btn btn-primary btn-answer" %>
+              <% end %>
+
+<% end %>
+          </div>
+  </div>

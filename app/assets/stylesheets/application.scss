@@ -67,6 +67,19 @@
   float: none;
 }
 
+.user_form {
+  border: 1px solid #939393;
+  border-radius: 3px;
+}
+
+#user_properties {
+  border-right: 1px solid #b0aeae;
+  margin-bottom: 20px;
+}
+
+#cancel_account form.button_to, #cancel_account h3 {
+  text-align: center;
+}
 
 .user_profile {
   border: 1px solid #cfcfcf;
@@ -118,4 +131,13 @@ quote {
   display: block;
   margin-bottom: 10px;
   margin-top: 5px;
+}
+
+
+h4.listing {
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  margin: 0;
+  padding: 0;
 }

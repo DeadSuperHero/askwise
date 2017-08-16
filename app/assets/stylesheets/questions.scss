@@ -51,7 +51,7 @@
   margin-bottom: 0px !important;
 }
 
-h2.heading {
+.heading {
   font-weight: 200;
   margin: 10px;
   display: inline-block;
@@ -99,79 +99,6 @@ input:focus {
 
 user_info img, user_avatar img {
   border-radius:30px;
-}
-
-
-/* Some styling for Answers */
-
-.answer_well {
-  background-color: #f1f1f1;
-  border: 1px solid #c1c1c1;
-  border-top: none;
-}
-
-textarea.answer_content {
-  min-width: 100%;
-  min-width: 100%;
-}
-
-input.btn-answer {
-  vertical-align: top;
-}
-
-.question_tag_list {
-  width: 50%;
-  display: inline-block;
-}
-
-.accept {
-  display: inline-block;
-  float: right;
-}
-
-input#question_tag_list {
-  width: 90%;
-  display: inline-block;
-}
-
-.answer_editor {
-  display: inline-block;
-  width: 80%;
-  padding: 10px;
-}
-
-.answer_body_inner img {
-  width: 100%;
-}
-
-#md-editor img {
-      width: 100%;
-}
-
-.answer_actions {
-  display: inline-block;
-  float: right;
-}
-
-.answer_actions a, .question_actions a {
-  color: #6b6b6b;
-}
-
-.answer_body {
-  padding: 10px;
-  border-bottom: 1px solid #b1b1b1;
-}
-
-.answer_blocked {
-  text-align: center;
-  background: #cecece;
-  padding: 10px;
-  border-radius: 3px;
-}
-
-.new_answer {
-  padding-top: 10px;
-  padding-left: 10px;
 }
 
 .response_avatar {

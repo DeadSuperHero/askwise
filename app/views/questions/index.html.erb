@@ -8,7 +8,8 @@
     <% unless @questions.blank? %>
       <% @questions.each do |question| %>
       <div class="question_entry">
-        <b><%= link_to question.query, question %></b>
+        <h4 class="listing"><%= link_to question.query, question %></h4>
+        <div class="badge"><%= question.answers.count %></div>
         <p><%= question.user.email %></p>
         <p><%= strip_tags(markdown(question.body)).truncate(300) %></p>
       </div>
