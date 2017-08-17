@@ -1,0 +1,14 @@
+<div class="col-md-8">
+  <h2>Departments</h2>
+
+  <div class="department_list">
+    <% unless @departments.blank? %>
+    <% @departments.each  do |department| %>
+      <p><%= link_to department.name, department %></p>
+    <% end %>
+    <% else %>
+    <p> No departments yet!</p>
+    <% end %>
+  </div>
+
+</div>
