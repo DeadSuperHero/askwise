@@ -15,6 +15,10 @@ class DepartmentsController < ApplicationController
       @members = @department.users
     end
 
+    def new
+      @department = departments.build
+    end
+
     # GET /departments/1/edit
     def edit
     end
