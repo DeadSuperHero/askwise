@@ -16,7 +16,7 @@ class DepartmentsController < ApplicationController
     end
 
     def new
-      @department = departments.build
+      @department = Department.new
     end
 
     # GET /departments/1/edit
@@ -26,11 +26,11 @@ class DepartmentsController < ApplicationController
     # POST /departments
     # POST /departments.json
     def create
-      @department = departments.build(department_params)
+      @department = Department.create(department_params)
 
       respond_to do |format|
         if @department.save
-          format.html {redirect_to @department.index, notice: "Department created."}
+          format.html {redirect_to @department, notice: "Department created."}
           format.json {render :show, status: :created, location: @department}
         else
           format.html { render :new }
