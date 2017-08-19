@@ -87,12 +87,8 @@
   border-radius: 5px;
 }
 
-.details {
-  text-align: center;
-}
-
 .details img {
-  border-radius: 15px;
+  border-radius: 8em;
 }
 
 .contributions {
@@ -145,10 +141,13 @@ h4.listing {
 
 .user_department {
   display: inline-block;
-  background: #ddd;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 3px;
+      background: #ddd;
+      padding: 5px;
+      margin: 5px;
+      border-radius: 3px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
 }
 
 .department_headshot {
