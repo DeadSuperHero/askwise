@@ -1,7 +1,7 @@
 <div class="user_form col-md-10">
   <h2>Sign up</h2>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
 
     <div id="user_properties" class="col-md-8">
@@ -22,6 +22,11 @@
     <div class="field">
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :department_id %><br />
+      <%= f.collection_select :department_id, Department.all, :id, :name, { class: "form-dropdown" }%>
     </div>
 
     <div class="actions">

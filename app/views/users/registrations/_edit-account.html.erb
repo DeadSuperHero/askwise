@@ -7,6 +7,7 @@
   </div>
 
   <div class="field">
+    <%= f.label :department_id %><br />
     <%= f.collection_select :department_id, Department.all, :id, :name, { class: "form-dropdown" }%>
   </div>
 
