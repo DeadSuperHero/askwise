@@ -12,6 +12,7 @@ class DepartmentsController < ApplicationController
     # GET /departments.json
     def show
       @department = Department.find_by_id(params[:id])
+      @members = @department.users
     end
 
     # GET /departments/1/edit

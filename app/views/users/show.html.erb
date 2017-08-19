@@ -5,7 +5,7 @@
     <p><b><%= @user.email %></b></p>
       <div class="user_department">
         <i class="fa fa-users" aria-hidden="true"></i>
-        <b><%= link_to @user.department.name, department_path %></b>
+        <b><%= link_to @user.department.name, @user.department %></b>
       </div>
   </div>
 
