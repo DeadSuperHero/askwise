@@ -3,6 +3,10 @@
   <div class="details">
     <%= image_tag headshot_for @user %>
     <p><b><%= @user.email %></b></p>
+      <div class="user_department">
+        <i class="fa fa-users" aria-hidden="true"></i>
+        <b><%= link_to @user.department.name, @user.department %></b>
+      </div>
   </div>
 
   <div class="contributions">

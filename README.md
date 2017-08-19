@@ -11,11 +11,18 @@ questions.
 
 AskWise is currently alpha software, provided as-is.
 
-__Feature roadmap:__  
+## Features
+* __User Profiles__ - See questions and answers provided by any user.
 * __Departments__ - Users in a team can be assigned to specific departments, so
 that you can know which departments are asking certain types of questions.
 * __Tagging__ - Questions can be tagged with a given topic, and questions can
 be searched by their related tags. This keeps similar topics in the same place.
+
+## Future Roadmap
+* __Search__ - All questions should be searchable. As a bonus, you should be
+able to search for Questions, Users, and Departments
+* __Voting__ - Allow your team to agree on which answer is the best one.
+* __Admin Dashboard__ - For managing configuration.
 * __Slack Integration__ - Dedicate a Slack channel to asking questions, and a bot
 will search the knowledge base and provide an answer. If a question hasn't been
 asked yet, it will give users the chance to create one.

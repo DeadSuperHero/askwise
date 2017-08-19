@@ -1,0 +1,21 @@
+<div class="user_profile col-md-10">
+    <h2>Departments</h2>
+
+    <div class="department_list">
+      <% unless @departments.blank? %>
+      <% @departments.each  do |department| %>
+      <div class="department_entry">
+        <h4><%= link_to department.name, department %></h4>
+        <div class="badge"><%= department.users.count %></div>
+      </div>
+      <% end %>
+      <% else %>
+      <p> No departments yet!</p>
+      <% end %>
+    </div>
+
+
+<%= link_to "Create new department", new_department_path,
+class: :"btn btn-default btn-block" %>
+
+</div>

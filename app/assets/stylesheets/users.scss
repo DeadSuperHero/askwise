@@ -1,0 +1,68 @@
+#user_menu {
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.user_info {
+  background: #f5f5f5;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+user_info img, user_avatar img {
+  border-radius:30px;
+}
+
+.user_form {
+  border: 1px solid #939393;
+  border-radius: 3px;
+}
+
+#user_properties {
+  border-right: 1px solid #b0aeae;
+  margin-bottom: 20px;
+}
+
+.user_profile {
+  border: 1px solid #cfcfcf;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+.details img {
+  border-radius: 8em;
+}
+
+.contributions {
+  border: 1px solid #b7b6b6;
+  border-radius: 3px;
+}
+
+.contributions .nav-tabs {
+  background: #f3f3f3;
+}
+
+ul.user_question_list, ul.user_answer_list {
+  padding: 10px;
+  text-align: left;
+}
+
+.contributions .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+
+.user_department {
+  display: inline-block;
+  background: #fff;
+  padding: 3px 10px 3px 10px;
+  margin: 5px;
+  border-radius: 3px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: 1px solid #b0b0b0;
+}

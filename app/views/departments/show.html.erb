@@ -1,0 +1,12 @@
+<div class="user_profile col-md-10">
+<h2><%= @department.name %></h2>
+
+<% @members.each do |member| %>
+  <%= link_to member do %>
+  <div class="department_headshot">
+    <%= image_tag headshot_for member %>
+    <p><b><%= member.email %></b></p>
+  </div>
+  <% end %>
+<% end %>
+</div>
