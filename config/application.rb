@@ -12,5 +12,10 @@ module Askwise
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    Raven.configure do |config|
+      config.dsn = 'https://7d431900eb914e6b8069d9f950f831de:d27ec41ef37f4040859790851689824c@sentry.io/205988'
+      config.filter_parameters << :password
+    end
+
   end
 end

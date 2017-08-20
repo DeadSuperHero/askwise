@@ -76,6 +76,7 @@ end
 group :production do
   gem 'rails_12factor'
   gem 'fog'
+  gem "sentry-raven"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
