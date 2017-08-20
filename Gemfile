@@ -55,6 +55,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Sentry Integration
+  gem "sentry-raven"
+
 # Authentication
 gem 'devise'
 gem 'friendly_id'
@@ -76,7 +79,6 @@ end
 group :production do
   gem 'rails_12factor'
   gem 'fog'
-  gem "sentry-raven"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
