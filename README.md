@@ -17,6 +17,8 @@ AskWise is currently alpha software, provided as-is.
 that you can know which departments are asking certain types of questions.
 * __Tagging__ - Questions can be tagged with a given topic, and questions can
 be searched by their related tags. This keeps similar topics in the same place.
+* __Sentry Integration__ - Basic integration with [the open source error tracking platform](https://sentry.io/welcome/). Handy
+for self-hosters and developers looking to extend Askwise.
 
 ## Future Roadmap
 * __Search__ - All questions should be searchable. As a bonus, you should be

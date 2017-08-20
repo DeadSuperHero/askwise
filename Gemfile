@@ -55,6 +55,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Sentry Integration
+  gem "sentry-raven"
+
 # Authentication
 gem 'devise'
 gem 'friendly_id'
