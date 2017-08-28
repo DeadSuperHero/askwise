@@ -39,6 +39,9 @@ gem 'pg_search'
 gem "redcarpet"
 gem "md_simple_editor"
 
+# Make it multitenant
+gem 'apartment'
+
 # Add tagging library
 gem 'acts-as-taggable-on', '~> 4.0'
 
