@@ -3,6 +3,8 @@
 AskWise is a question-and-answer platform intended for teams. This tool is
 intended to serve three purposes:  
 
+__The current build of Askwise is going through architectural adjustments, as the application is being adjusted for multi-tenant support. You may experience issues with deployment in the meantime.__
+
 * Determine which questions are getting asked the most within a company or
 organization
 * Provide materials to build a knowledge base, using these frequently-asked
